@@ -26,10 +26,14 @@ public class Prescription{
     @NotNull
     private List<Medicines> medicines;
 
-    private String advice = "Stay safe and get well soon";
+    private String advice;
 
     private int scheduledCourse;
     //getters and setters
+
+    Prescription(){
+      this.advice  = "Stay safe and get well soon";
+    }
     public String getId() {
         return id;
     }
@@ -56,7 +60,7 @@ public class Prescription{
     }
 
     public void setDoctorId(String doctorId) {
-        doctorId = doctorId;
+        this.doctorId = doctorId;
     }
 
     public String getPatientName() {
